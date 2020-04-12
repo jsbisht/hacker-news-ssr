@@ -1,0 +1,41 @@
+:root {
+  --orange-primary-bkgd: #ff6602;
+  --grey-primary-bkgd: #f6f6ef;
+}
+
+body {
+  margin: 0;
+  background: var(--grey-primary-bkgd);
+}
+
+header {
+  background: var(--orange-primary-bkgd);
+  padding: 12px;
+}
+
+header .header-items {
+  display: inline-block;
+}
+
+header .header-items.header-items--logo-icon {
+  border: 1px solid white;
+  width: 16px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+header .header-items.header-items--stories-type {
+  border-right: 1px solid black;
+  text-align: center;
+  width: 45px;
+}
+
+.header-items.header-items--stories-type:last-child {
+  border: none;
+}
+
+.selected-text {
+  color: white;
+}

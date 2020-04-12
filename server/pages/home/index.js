@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import App from "../../../client/App";
+import StoriesList from "./stories-list";
+import getStories from "../../services/home/stories-list";
 
-export const template = `<div id="root">${ReactDOMServer.renderToString(
-  <App />
-)}</div>`;
+async function getHomePage() {
+  const stories = await getStories();
+  return ReactDOMServer.renderToString(<StoriesList stories={stories.hits} />);
+}
+
+export default getHomePage;
