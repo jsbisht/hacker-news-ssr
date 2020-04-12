@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "start": "parcel public/index.html",
+    "start": "node dist/server/index.js",
     "build": "webpack",
-    "ssr": "node dist/server/index.js",
-    "ssr-dev": "nodemon dist/server/index.js"
+    "dev": "webpack && concurrently \"webpack --watch\" \"nodemon dist/server/index.js\""
   },
   "license": "MIT",
   "dependencies": {
@@ -23,7 +22,12 @@
   "devDependencies": {
     "babel-loader": "8.1.0",
     "babel-preset-nano-react-app": "^0.1.0",
+    "concurrently": "^5.1.0",
+    "css-loader": "^3.5.2",
+    "node-sass": "^4.13.1",
     "parcel-bundler": "^1.12.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
     "webpack-node-externals": "1.7.2"

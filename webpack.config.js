@@ -12,6 +12,18 @@ const js = {
   },
 };
 
+const scss = {
+  test: /\.scss$/i,
+  use: [
+    // Creates `style` nodes from JS strings
+    "style-loader",
+    // Translates CSS into CommonJS
+    "css-loader",
+    // Compiles Sass to CSS
+    "sass-loader",
+  ],
+};
+
 const serverConfig = {
   mode: "development",
   target: "node",
@@ -38,7 +50,7 @@ const clientConfig = {
     "index.js": path.resolve(__dirname, "client/index.js"),
   },
   module: {
-    rules: [js],
+    rules: [js, scss],
   },
   output: {
     path: path.resolve(__dirname, "dist/client"),
