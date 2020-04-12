@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build client/index.js",
-    "ssr": "node server/index.js",
-    "ssr-dev": "nodemon server/index.js"
+    "build": "webpack",
+    "ssr": "node dist/server/index.js",
+    "ssr-dev": "nodemon dist/server/index.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -21,8 +21,12 @@
     "react-dom": "^16.13.0"
   },
   "devDependencies": {
+    "babel-loader": "8.1.0",
     "babel-preset-nano-react-app": "^0.1.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11",
+    "webpack-node-externals": "1.7.2"
   },
   "babel": {
     "presets": [

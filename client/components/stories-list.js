@@ -1,6 +1,6 @@
 import React from "react";
-import getDomainName from "../../utility/url";
-import getDateStr from "../../utility/date";
+import getDomainName from "../utility/url";
+import getDateStr from "../utility/date";
 
 function StoriesList(props) {
   const { stories } = props;

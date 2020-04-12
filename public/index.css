@@ -109,3 +109,7 @@ header .header-items.header-items--stories-type {
 .more-text {
   color: var(--orange-primary);
 }
+
+.story-hide-btn {
+  cursor: pointer;
+}

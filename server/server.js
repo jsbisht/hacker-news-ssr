@@ -7,7 +7,7 @@ const app = express();
 
 initializeRoutes(app);
 
-app.use(express.static(path.resolve(__dirname, "..", "public")));
+app.use(express.static(path.resolve(__dirname, "..", "client")));
 
 app.listen(PORT, () => {
   console.log(`Node server running at ${PORT}`);

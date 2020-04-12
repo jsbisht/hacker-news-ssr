@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import StoriesList from "./stories-list";
+import StoriesList from "../../../client/components/stories-list";
 import getStories from "../../services/home/stories-list";
 
 async function getHomePage() {
