@@ -9,6 +9,6 @@ initializeRoutes(app);
 
 app.use(express.static(path.resolve(__dirname, "..", "client")));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Node server running at ${PORT}`);
 });
