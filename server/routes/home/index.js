@@ -15,7 +15,7 @@ async function homeRouteHandler(req, res) {
           stories,
         })}</script>
       </head>
-      <body>
+      <body style="display: none">
         <header>
           <div class="header-items header-items--logo-icon">Y</div>
           <div class="header-items header-items--stories-type selected-text">

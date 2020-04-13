@@ -9,6 +9,7 @@
   --grey-light-2: #b8b8b8;
 }
 body {
+  display: block !important;
   margin: 0;
   background: var(--grey-primary-bkgd);
 }
