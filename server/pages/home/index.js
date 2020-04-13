@@ -6,7 +6,7 @@ import getStories from "../../services/home/stories-list";
 async function getHomePage() {
   const stories = await getStories();
   return [
-    ReactDOMServer.renderToString(<StoriesList stories={stories.hits} />),
+    ReactDOMServer.renderToNodeStream(<StoriesList stories={stories.hits} />),
     stories,
   ];
 }
