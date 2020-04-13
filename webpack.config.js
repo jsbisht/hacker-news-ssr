@@ -1,5 +1,6 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
+const environment = process.env.NODE_ENV || "development";
 
 const js = {
   test: /\.js$/,
@@ -25,7 +26,7 @@ const scss = {
 };
 
 const serverConfig = {
-  mode: "development",
+  mode: environment,
   target: "node",
   node: {
     __dirname: false,
@@ -44,7 +45,7 @@ const serverConfig = {
 };
 
 const clientConfig = {
-  mode: "development",
+  mode: environment,
   target: "web",
   entry: {
     "index.js": path.resolve(__dirname, "client/index.js"),
