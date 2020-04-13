@@ -2,7 +2,7 @@ import getHomePage from "../../pages/home/index";
 import { SSR_STORIES_TAG } from "../../utility/constants";
 
 async function homeRouteHandler(req, res) {
-  const template = await getHomePage();
+  const [template, stories] = await getHomePage();
 
   const homepage = `
     <!DOCTYPE html>
@@ -11,6 +11,9 @@ async function homeRouteHandler(req, res) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hacker News</title>
+        <script>window.__INITIAL__DATA__ = ${JSON.stringify({
+          stories,
+        })}</script>
       </head>
       <body>
         <header>

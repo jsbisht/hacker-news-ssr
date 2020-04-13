@@ -1,34 +1,24 @@
-# nano-react-app-template
+# hacker-news-ssr
 
-The template project for [nano-react-app](https://github.com/adrianmcli/nano-react-app).
+Rendering hacker news using server side rendering
 
-- `npm start` — This will spawn a development server with a default port of `1234`.
-- `npm run build` — This will output a production build in the `dist` directory.
+## Steps
 
-## Custom port
-
-You can use the `-p` flag to specify a port for development. To do this, you can either run `npm start` with an additional flag:
+Initializer repo npm dependencies:
 
 ```
-npm start -- -p 3000
+npm install
 ```
 
-Or edit the `start` script directly:
+In development:
 
 ```
-parcel index.html -p 3000
+npm run dev
 ```
 
-## Adding styles
+In production:
 
-You can use CSS files with simple ES2015 `import` statements in your Javascript:
-
-```js
-import "./index.css";
 ```
-
-## Babel transforms
-
-The Babel preset [babel-preset-nano-react-app](https://github.com/adrianmcli/babel-preset-nano-react-app) and a small amount of configuration is used to support the same transforms that Create React App supports.
-
-The Babel configuration lives inside `package.json` and will override an external `.babelrc` file, so if you want to use `.babelrc` remember to delete the `babel` property inside `package.json`.
+npm run build
+npm run start
+```

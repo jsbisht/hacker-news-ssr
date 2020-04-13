@@ -40,61 +40,6 @@ header {
 .selected-text {
   color: var(--white);
 }
-.stories-list {
-  margin-top: 24px;
-  .stories-list--wrapper {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    .stories-list--item {
-      padding: 5px;
-      &:nth-child(odd) {
-        background: var(--grey-secondary-bkgd);
-      }
-      span {
-        margin-right: 6px;
-      }
-      .light-grey {
-        color: var(--grey-light-2);
-        margin: 0;
-      }
-      .text {
-        margin: 0;
-      }
-      .story-comment-count {
-        display: inline-block;
-        margin: 0 36px;
-        text-align: right;
-        width: 36px;
-      }
-      .story-upvotes {
-        width: 36px;
-        display: inline-block;
-        text-align: right;
-        margin-right: 6px;
-      }
-      .story-upvote-btn {
-        color: var(--grey-btn);
-        font-size: 0.7em;
-        margin-right: 6px;
-      }
-      .story-link {
-        a {
-          color: var(--grey-light-1);
-        }
-      }
-      .story-created-at {
-        color: var(--grey-light-1);
-      }
-      .more-text {
-        color: var(--orange-primary);
-      }
-      .story-hide-btn {
-        cursor: pointer;
-      }
-    }
-  }
-}
 .hidden {
   visibility: hidden;
 }

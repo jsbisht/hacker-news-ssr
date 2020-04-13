@@ -1,16 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import StoriesList from "./components/stories-list";
-import getStories from "../server/services/home/stories-list";
 
 import "./index.scss";
+import "./components/stories-list.scss";
+import processStories from "./components/process-stories";
 
-async function getHomePage() {
-  const stories = await getStories();
+function loadHomePage() {
+  const { stories } = window.__INITIAL__DATA__;
+  const filteredList = processStories(stories);
   return ReactDOM.hydrate(
-    <StoriesList stories={stories.hits} />,
+    <StoriesList stories={filteredList} />,
     document.getElementById("root")
   );
 }
 
-export default getHomePage;
+loadHomePage();

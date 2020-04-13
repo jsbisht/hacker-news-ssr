@@ -5,7 +5,10 @@ import getStories from "../../services/home/stories-list";
 
 async function getHomePage() {
   const stories = await getStories();
-  return ReactDOMServer.renderToString(<StoriesList stories={stories.hits} />);
+  return [
+    ReactDOMServer.renderToString(<StoriesList stories={stories.hits} />),
+    stories,
+  ];
 }
 
 export default getHomePage;
